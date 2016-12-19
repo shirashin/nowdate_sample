@@ -10,7 +10,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.tag$/,
+        test: /\.tag.html$/,
         exclude: /node_modules/,
         loader: 'riotjs-loader',
         query: {
@@ -27,7 +27,7 @@ module.exports = {
     ]
   },
   resolve: {
-      extensions: ['', '.js', '.tag']
+      extensions: ['', '.js', '.tag.html']
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),
