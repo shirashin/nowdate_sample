@@ -1,0 +1,10 @@
+script.
+  require('./weekday.tag.pug')
+now_date
+  span 今は{year}/{month}/{day}(<weekday num={week}></weekday>)
+  script.
+    var date=new Date();
+    this.year = date.getFullYear();
+    this.month = date.getMonth();
+    this.week = date.getDay();
+    this.day = date.getDate();

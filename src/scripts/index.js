@@ -1,4 +1,4 @@
-require('./now_date.tag.html');
-require('./now_time.tag.html');
+require('./now_date.tag.pug');
+require('./now_time.tag.pug');
 
 riot.mount('*');

@@ -10,7 +10,12 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.tag.html$/,
+        test: /\.pug$/,
+        exclude: /node_modules/,
+        loader: 'tag-pug-loader'
+      },
+      {
+        test: /\.tag$/,
         exclude: /node_modules/,
         loader: 'riotjs-loader',
         query: {
@@ -23,11 +28,11 @@ module.exports = {
         test: /\.js$|\.tag$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      }
+      },
     ]
   },
   resolve: {
-      extensions: ['', '.js', '.tag.html']
+      extensions: ['', '.js', '.tag.pug']
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),

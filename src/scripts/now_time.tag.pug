@@ -1,0 +1,10 @@
+now_time
+  span {hours}:{minutes}:{seconds}
+  script.
+    var self = this
+    class Tick(){
+      date = new Date(); 
+      self.update({ hours: date.getHours(), minutes: date.getMinutes(), seconds: date.getSeconds() });
+    }
+    this.tick =  now Tick();
+    var timer = setInterval(this.tick, 1000);
