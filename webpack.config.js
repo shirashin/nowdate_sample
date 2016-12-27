@@ -10,24 +10,21 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.tag.html$/,
+        test: /\.tag\.pug$/,
         exclude: /node_modules/,
-        loader: 'riotjs-loader',
-        query: {
-          type: 'babel'
-        }
-      }
+        loader: 'tag-pug-loader',
+      },
     ],
     loaders: [
       {
-        test: /\.js$|\.tag$/,
+        test: /\.js$|\.tag.pug$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      }
+      },
     ]
   },
   resolve: {
-      extensions: ['', '.js', '.tag.html']
+      extensions: ['', '.js', '.tag.pug']
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),

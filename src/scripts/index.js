@@ -1,4 +1,5 @@
-require('./now_date.tag.html');
-require('./now_time.tag.html');
+require('../tags/weekday.tag.pug');
+require('../tags/now_date.tag.pug');
+require('../tags/now_time.tag.pug');
 
 riot.mount('*');
