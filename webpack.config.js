@@ -10,22 +10,14 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.pug$/,
+        test: /\.tag\.pug$/,
         exclude: /node_modules/,
-        loader: 'tag-pug-loader'
+        loader: 'tag-pug-loader',
       },
-      {
-        test: /\.tag$/,
-        exclude: /node_modules/,
-        loader: 'riotjs-loader',
-        query: {
-          type: 'babel'
-        }
-      }
     ],
     loaders: [
       {
-        test: /\.js$|\.tag$/,
+        test: /\.js$|\.tag.pug$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },

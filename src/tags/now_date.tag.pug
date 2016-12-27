@@ -1,0 +1,13 @@
+now_date
+  span
+    | 今は{year}/{month}/{day}(
+    <weekday num={week}></weekday>
+    | )
+  script.
+    var self = this;
+    this.tick = function(){
+      date = new Date(); 
+      self.update({ year: date.getFullYear(), month: date.getMonth(), week: date.getDay(), day: date.getDate() });
+    };
+    this.tick();
+    setInterval(this.tick, 1000);
