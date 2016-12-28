@@ -2,8 +2,8 @@ now_time
   span {hours}:{minutes}:{seconds}
   script.
     var self = this;
-    this.tick = function(){
-      date = new Date(); 
+    this.tick = () => {
+      let date = new Date(); 
       self.update({ hours: date.getHours(), minutes: date.getMinutes(), seconds: date.getSeconds() });
     };
     this.tick();

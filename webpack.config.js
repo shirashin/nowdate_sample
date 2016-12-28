@@ -1,10 +1,12 @@
 var webpack = require("webpack");
 
 module.exports = {
-  entry: './src/scripts/index.js',
+  entry: {
+    bundle: './src/scripts/index.js'
+  },
   output: {
     path: __dirname + '/app/scripts',
-    filename: 'bundle.js',
+    filename: '[name].js',
 		publicPath: '/app/',
   },
   module: {
@@ -12,14 +14,17 @@ module.exports = {
       {
         test: /\.tag\.pug$/,
         exclude: /node_modules/,
-        loader: 'tag-pug-loader',
+        loader: 'tag-pug-loader'
       },
     ],
     loaders: [
       {
         test: /\.js$|\.tag.pug$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        query:{
+          presets: ['es2015-riot']
+        }
       },
     ]
   },

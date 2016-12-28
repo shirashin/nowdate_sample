@@ -5,8 +5,8 @@ now_date
     | )
   script.
     var self = this;
-    this.tick = function(){
-      date = new Date(); 
+    this.tick = () => {
+      let date = new Date(); 
       self.update({ year: date.getFullYear(), month: date.getMonth(), week: date.getDay(), day: date.getDate() });
     };
     this.tick();
