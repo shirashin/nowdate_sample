@@ -10,7 +10,7 @@
     "babel-preset-es2015-riot": "^1.1.0",
     "concurrently": "^2.1.0",
     "lite-server": "^2.2.0",
-    "riotjs-loader": "^3.0.0",
+    "riotjs-loader": "shirashin/riotjs-loader",
     "tag-pug-loader": "^1.0.0",
     "webpack": "^1.13.0"
   },
